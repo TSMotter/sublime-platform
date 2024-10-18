@@ -1,0 +1,39 @@
+header:
+  version: 11
+
+machine: dogbonedark
+distro: kiss
+target:
+  - motter-image-minimal
+
+repos:
+  bitbake:
+    url: "https://git.openembedded.org/bitbake"
+    branch: "2.0"
+    layers:
+      .: excluded
+
+  openembedded-core:
+    url: "https://git.openembedded.org/openembedded-core"
+    branch: kirkstone
+    layers:
+      meta:
+
+  meta-arm:
+    url: "git://git.yoctoproject.org/meta-arm"
+    branch: kirkstone
+    layers:
+      meta-arm-toolchain:
+      meta-arm:
+
+  meta-kiss:
+    url: "https://github.com/TSMotter/simplest-yocto-setup.git"
+    branch: main
+    layers:
+      meta-kiss:
+
+  meta-motter:
+    url: "https://github.com/TSMotter/meta-motter.git"
+    branch: master
+    layers:
+      .:
