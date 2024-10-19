@@ -1,0 +1,5 @@
+.vscode
+bitbake/
+openembedded-core/
+meta-*/
+build/
