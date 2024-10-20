@@ -37,3 +37,7 @@ repos:
     branch: master
     layers:
       .:
+
+local_conf_header:
+  sublime-platform: |
+    EXTRA_IMAGE_FEATURES += " debug-tweaks "
